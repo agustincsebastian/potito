@@ -21,6 +21,18 @@ body{
     padding:40px;
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    width:350px;
+}
+
+img{
+    width:180px;
+    border-radius:15px;
+    margin:15px 0;
+    transition: transform .3s;
+}
+
+img:hover{
+    transform: scale(1.08);
 }
 
 button{
@@ -48,6 +60,9 @@ button{
 
 <div class="card" id="card">
     <h1>¿Quieres ser mi San Valentín? ❤️</h1>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Netherland_Dwarf_Rabbit_White.jpg" />
+
     <button id="yes">Sí</button>
     <button id="no">No</button>
 </div>
@@ -61,7 +76,6 @@ noBtn.addEventListener("click", () => {
     scale += 0.3;
     yesBtn.style.transform = `scale(${scale})`;
 
-    // mover botón NO aleatoriamente
     let x = Math.random() * 300 - 150;
     let y = Math.random() * 200 - 100;
     noBtn.style.transform = `translate(${x}px, ${y}px)`;
@@ -70,7 +84,7 @@ noBtn.addEventListener("click", () => {
 yesBtn.addEventListener("click", () => {
     document.body.innerHTML = `
         <h1 style="font-size:50px">Mas te vale poto enorme</h1>
-        <p style="font-size:25px">Te amo muchísimo, atte pupi</p>
+        <p style="font-size:25px">Te amo muchísimo, atte pupi ❤️🐰</p>
     `;
 });
 </script>
